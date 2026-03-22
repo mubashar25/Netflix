@@ -1,32 +1,36 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import TopHeader from "./components/TopHeader";
+import Carousel from "./components/Carousel";
+import Navbar from "./components/Navbar1";
+import CategoryBar from "./components/CategoryBar";
+import Featured from "./components/Featured";
+import WatchBuy from "./components/WatchBuy";
+import Shop from "./components/Shop";
+import ShopMen from "./components/ShopMen";
+import ShopFC from "./components/ShopFC";
+import ShopKids from "./components/ShopKids";
+import Skincare from "./components/Skincare";
+import EmailInput from "./components/EmailInput";
+import Footer from "./components/Footer";
 
-import Navbar from "./components/Navbar";
-
-import Dashboard from "./pages/Dashboard";
-import AddTask from "./pages/AddTask";
-import TaskList from "./pages/TaskList";
-import EditTask from "./pages/EditTask";
-
-function App() {
+const ProductList = () => {
   return (
-    <BrowserRouter>
-
-      <Navbar />
-
-      <Routes>
-
-        <Route path="/" element={<Dashboard />} />
-
-        <Route path="/tasks" element={<TaskList />} />
-
-        <Route path="/add-task" element={<AddTask />} />
-
-        <Route path="/edit-task/:id" element={<EditTask />} />
-
-      </Routes>
-
-    </BrowserRouter>
+    <div>
+     <TopHeader/>
+     <Navbar/>
+     <Carousel/>
+     <CategoryBar/>
+     <Featured/>
+     <WatchBuy/>
+     <Shop/>
+     <ShopMen/>
+     <ShopFC/>
+     <ShopKids/>
+     <Skincare/>
+     <EmailInput/>
+     <Footer/>
+    </div>
   );
-}
+};
 
-export default App;
+export default ProductList;
